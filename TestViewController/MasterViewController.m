@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "PanelViewController.h"
 
 @interface MasterViewController ()
 
@@ -19,11 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
+    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+
+    //panelTest
+    NSArray* testItems = [ [ NSArray alloc ] initWithObjects :@"PANEL" , nil ] ;
+    UISegmentedControl* mapSeg = [ [ UISegmentedControl alloc ] initWithItems : testItems ] ;
+    [ mapSeg addTarget : self
+                action : @selector( showPanel: )
+      forControlEvents : UIControlEventValueChanged ] ;
+    
+    mapSeg.frame = CGRectMake( 0.0, 0.0, 120.0, 30.0 ) ;
+    mapSeg.momentary = YES ;
+    
+    self.navigationItem.titleView = mapSeg ;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -43,6 +58,20 @@
     [self.objects insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)showPanel:(id)sender {
+    NSLog(@"showPanel");
+    
+    PanelViewController* panelViewController = [[PanelViewController  alloc] init] ;
+    
+    UINavigationController* naviController =
+    [[UINavigationController alloc] initWithRootViewController:panelViewController ] ;
+    
+    [self presentViewController:naviController
+                       animated:YES
+                     completion:nil] ;
+    [ panelViewController makeArrayData:0 ] ;
 }
 
 #pragma mark - Segues

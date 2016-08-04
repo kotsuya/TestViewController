@@ -16,6 +16,11 @@
 		E19E03531D52FCC500BF27E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19E03511D52FCC500BF27E3 /* LaunchScreen.storyboard */; };
 		E19E035E1D52FCC500BF27E3 /* TestViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E035D1D52FCC500BF27E3 /* TestViewControllerTests.m */; };
 		E19E03691D52FCC500BF27E3 /* TestViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E03681D52FCC500BF27E3 /* TestViewControllerUITests.m */; };
+		E19E03991D52FF3300BF27E3 /* PaneledScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E038F1D52FF3300BF27E3 /* PaneledScrollView.m */; };
+		E19E039A1D52FF3300BF27E3 /* PanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E03911D52FF3300BF27E3 /* PanelView.m */; };
+		E19E039B1D52FF3300BF27E3 /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E03931D52FF3300BF27E3 /* PanelViewController.m */; };
+		E19E039D1D52FF3300BF27E3 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E03971D52FF3300BF27E3 /* TestView.m */; };
+		E19E039F1D53092600BF27E3 /* Panel.plist in Resources */ = {isa = PBXBuildFile; fileRef = E19E039E1D53092600BF27E3 /* Panel.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,15 @@
 		E19E03641D52FCC500BF27E3 /* TestViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19E03681D52FCC500BF27E3 /* TestViewControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewControllerUITests.m; sourceTree = "<group>"; };
 		E19E036A1D52FCC500BF27E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E19E038E1D52FF3300BF27E3 /* PaneledScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaneledScrollView.h; sourceTree = "<group>"; };
+		E19E038F1D52FF3300BF27E3 /* PaneledScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaneledScrollView.m; sourceTree = "<group>"; };
+		E19E03901D52FF3300BF27E3 /* PanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelView.h; sourceTree = "<group>"; };
+		E19E03911D52FF3300BF27E3 /* PanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelView.m; sourceTree = "<group>"; };
+		E19E03921D52FF3300BF27E3 /* PanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
+		E19E03931D52FF3300BF27E3 /* PanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelViewController.m; sourceTree = "<group>"; };
+		E19E03961D52FF3300BF27E3 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		E19E03971D52FF3300BF27E3 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		E19E039E1D53092600BF27E3 /* Panel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Panel.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,7 @@
 		E19E033F1D52FCC500BF27E3 /* TestViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E19E038A1D52FF3300BF27E3 /* TouchPanel */,
 				E19E03431D52FCC500BF27E3 /* AppDelegate.h */,
 				E19E03441D52FCC500BF27E3 /* AppDelegate.m */,
 				E19E03461D52FCC500BF27E3 /* MasterViewController.h */,
@@ -114,6 +129,7 @@
 				E19E034F1D52FCC500BF27E3 /* Assets.xcassets */,
 				E19E03511D52FCC500BF27E3 /* LaunchScreen.storyboard */,
 				E19E03541D52FCC500BF27E3 /* Info.plist */,
+				E19E039E1D53092600BF27E3 /* Panel.plist */,
 				E19E03401D52FCC500BF27E3 /* Supporting Files */,
 			);
 			path = TestViewController;
@@ -143,6 +159,21 @@
 				E19E036A1D52FCC500BF27E3 /* Info.plist */,
 			);
 			path = TestViewControllerUITests;
+			sourceTree = "<group>";
+		};
+		E19E038A1D52FF3300BF27E3 /* TouchPanel */ = {
+			isa = PBXGroup;
+			children = (
+				E19E038E1D52FF3300BF27E3 /* PaneledScrollView.h */,
+				E19E038F1D52FF3300BF27E3 /* PaneledScrollView.m */,
+				E19E03901D52FF3300BF27E3 /* PanelView.h */,
+				E19E03911D52FF3300BF27E3 /* PanelView.m */,
+				E19E03921D52FF3300BF27E3 /* PanelViewController.h */,
+				E19E03931D52FF3300BF27E3 /* PanelViewController.m */,
+				E19E03961D52FF3300BF27E3 /* TestView.h */,
+				E19E03971D52FF3300BF27E3 /* TestView.m */,
+			);
+			path = TouchPanel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E19E03531D52FCC500BF27E3 /* LaunchScreen.storyboard in Resources */,
+				E19E039F1D53092600BF27E3 /* Panel.plist in Resources */,
 				E19E03501D52FCC500BF27E3 /* Assets.xcassets in Resources */,
 				E19E034E1D52FCC500BF27E3 /* Main.storyboard in Resources */,
 			);
@@ -277,8 +309,12 @@
 			files = (
 				E19E03451D52FCC500BF27E3 /* AppDelegate.m in Sources */,
 				E19E03481D52FCC500BF27E3 /* MasterViewController.m in Sources */,
+				E19E039A1D52FF3300BF27E3 /* PanelView.m in Sources */,
+				E19E03991D52FF3300BF27E3 /* PaneledScrollView.m in Sources */,
 				E19E03421D52FCC500BF27E3 /* main.m in Sources */,
 				E19E034B1D52FCC500BF27E3 /* DetailViewController.m in Sources */,
+				E19E039D1D52FF3300BF27E3 /* TestView.m in Sources */,
+				E19E039B1D52FF3300BF27E3 /* PanelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
