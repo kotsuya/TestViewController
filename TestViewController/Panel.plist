@@ -5934,112 +5934,16 @@
 		<string>50</string>
 	</dict>
 	<dict>
-		<key>child</key>
-		<array>
-			<dict>
-				<key>Title</key>
-				<string>A</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-			<dict>
-				<key>Title</key>
-				<string>B</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-			<dict>
-				<key>Title</key>
-				<string>C</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-		</array>
 		<key>Title</key>
-		<string>ABC</string>
+		<string>Detail</string>
 		<key>Data</key>
-		<string>1111</string>
+		<string>Detail</string>
 	</dict>
 	<dict>
-		<key>child</key>
-		<array>
-			<dict>
-				<key>Title</key>
-				<string>A</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-			<dict>
-				<key>Title</key>
-				<string>B</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-			<dict>
-				<key>Title</key>
-				<string>C</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-		</array>
 		<key>Title</key>
-		<string>ABC</string>
+		<string>WebView?</string>
 		<key>Data</key>
-		<string>1111</string>
-	</dict>
-	<dict>
-		<key>child</key>
-		<array>
-			<dict>
-				<key>Title</key>
-				<string>A</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-			<dict>
-				<key>Title</key>
-				<string>B</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-			<dict>
-				<key>Title</key>
-				<string>C</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-		</array>
-		<key>Title</key>
-		<string>ABC</string>
-		<key>Data</key>
-		<string>1111</string>
-	</dict>
-	<dict>
-		<key>child</key>
-		<array>
-			<dict>
-				<key>Title</key>
-				<string>A</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-			<dict>
-				<key>Title</key>
-				<string>B</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-			<dict>
-				<key>Title</key>
-				<string>C</string>
-				<key>Data</key>
-				<integer>222</integer>
-			</dict>
-		</array>
-		<key>Title</key>
-		<string>ABC</string>
-		<key>Data</key>
-		<string>1111</string>
+		<string>WebView?</string>
 	</dict>
 </array>
 </plist>

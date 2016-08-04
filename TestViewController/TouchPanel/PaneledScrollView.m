@@ -68,7 +68,7 @@
 		// タップ検出用には、各パネルの UIView を使わず、全体を囲む UIView を用意する
         // ここでは以前用意した TestView を利用。ただし TestView は drawRect: を無効にした
 		panelContainerView = [[TestView alloc] initWithFrame:CGRectZero] ;
-        panelContainerView.backgroundColor = [ UIColor clearColor ] ;
+        panelContainerView.backgroundColor = [ UIColor clearColor ] ;        
 		panelContainerView.drawSelf = NO ;		// drawRectを無効にする。
         
 		[self addSubview:panelContainerView] ;
@@ -275,7 +275,7 @@
                 
                 //#b0b0b0
                 [[panel layer] setBorderColor:[[UIColor colorWithRed:0.69 green:0.69 blue:0.69 alpha:1.0] CGColor]] ;
-                panel.backgroundColor = [ UIColor whiteColor ] ;
+                panel.backgroundColor = [ UIColor whiteColor ] ;            
 			}
 		}
 	}

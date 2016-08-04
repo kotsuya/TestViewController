@@ -63,15 +63,18 @@
 - (void)showPanel:(id)sender {
     NSLog(@"showPanel");
     
-    PanelViewController* panelViewController = [[PanelViewController  alloc] init] ;
+    if(panelNaviController == nil)
+    {
+        PanelViewController* panelViewController = [[PanelViewController  alloc] init] ;
+        
+        panelNaviController =
+        [[UINavigationController alloc] initWithRootViewController:panelViewController ] ;
+        [ panelViewController makeArrayData:0 ] ;
+    }
     
-    UINavigationController* naviController =
-    [[UINavigationController alloc] initWithRootViewController:panelViewController ] ;
-    
-    [self presentViewController:naviController
+    [self presentViewController:panelNaviController
                        animated:YES
                      completion:nil] ;
-    [ panelViewController makeArrayData:0 ] ;
 }
 
 #pragma mark - Segues

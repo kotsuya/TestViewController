@@ -49,10 +49,10 @@ extern CGFontRef	gPanelFont ;
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext() ;
-    CGContextSetRGBFillColor( context, 0.94, 0.97, 1.0, 1.0 ) ;
-    CGContextFillRect( context, self.bounds ) ;
-    CGContextSetRGBFillColor( context, 1.0, 1.0, 1.0, 1.0 ) ;
-    CGContextSetFillColorWithColor( context, [UIColor blackColor].CGColor ) ;
+    CGContextSetFillColorWithColor( context, [UIColor whiteColor].CGColor ) ;
+    
+    //CGContextFillRect( context, self.bounds ) ;
+    //CGContextSetFillColorWithColor( context, [UIColor blackColor].CGColor ) ;
     
     if ( self.tag < binLineCount )
     {

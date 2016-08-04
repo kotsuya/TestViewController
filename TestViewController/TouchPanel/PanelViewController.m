@@ -8,6 +8,7 @@
 #import "PanelViewController.h"
 #import "TestView.h"
 #import "PanelView.h"
+#import "DetailViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -238,7 +239,7 @@ singleTapAtPoint:(CGPoint)tapLocation
                          selectedView, @"view",
                          nil ] ;
     
-    [ selectedView setBackgroundColor:[ UIColor whiteColor ] ];
+    [ selectedView setBackgroundColor:[ UIColor lightGrayColor ] ];
     
     [ UIView commitAnimations ];
     ////
@@ -369,25 +370,18 @@ twoFingerTapAtPoint:(CGPoint)tapLocation
 // ---------------------------------------------------------------------------------
 - (void)addDetailViewDidAnimation:(NSDictionary*)dic
 {
-    //NSLog( @"tag intValue -> %d", [tag intValue ] ) ;
-    
     /*
-     int	uiSize = sizeof( unsigned int ) ;
-     
-     DWORD block= 0;
-     DWORD offset = 0 ;
-     size_t	pos = uiSize * 2  + (( uiSize * 2 + binMaxLength )* [ tag intValue ]) ;
-     
-     lseek( binFD, pos, SEEK_SET );
-     read(binFD, &block,  uiSize);
-     
-     read(binFD, &offset, uiSize );
-     
-     if ( block > 0 )
-     {
-     gFromPanelAction = YES ;
-     [ gBrowserController showDetailByBlockOffset:(int)block offset:(int)offset ] ;
-     }*/
+    //NSLog( @"tag intValue -> %d", [tag intValue ] ) ;
+    UIView* view = [ dic objectForKey:@"view" ] ;
+    
+    DetailViewController *controller = [[ DetailViewController alloc ] init ] ;
+    [controller setDetailItem:[[ mPanelDataArray objectAtIndex:(int)view.tag ] objectForKey:@"Data" ]];
+    
+    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    controller.navigationItem.leftItemsSupplementBackButton = YES;
+     */
+    
+    [ self closeModalViewWithAnimation:nil ] ;
 }
 
 // ---------------------------------------------------------------------------------
@@ -556,7 +550,7 @@ twoFingerTapAtPoint:(CGPoint)tapLocation
     {
         if ( (minRow * minCol) < binLineCount)
         {
-            BOOL isOK = YES ;
+            BOOL isOK = NO ;
             while ((minRow * minCol) < binLineCount)
             {
                 if (isOK) minRow++ ;
@@ -594,6 +588,11 @@ twoFingerTapAtPoint:(CGPoint)tapLocation
     {
         panelSize.width = (frame.size.width)/5 ;
         panelSize.height = (frame.size.width)/5 ;
+    }
+    else if ([mTitleStr isEqualToString:@"PANEL" ])
+    {
+        panelSize.width = (frame.size.width)/2 ;
+        panelSize.height = ( frame.size.height - ( 44 + 20.0 ) )/2 ;
     }
     else
     {

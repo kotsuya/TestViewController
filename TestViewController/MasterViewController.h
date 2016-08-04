@@ -11,7 +11,9 @@
 @class DetailViewController;
 
 @interface MasterViewController : UITableViewController
-
+{
+    UINavigationController* panelNaviController ;
+}
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
 
